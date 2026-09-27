@@ -1,0 +1,3 @@
+case,dataset,fault,reason
+re1ob_currencyservice_loss_1,RE1-OB,loss,"Insufficient pre/post samples: pre=0, post=721"
+re1ob_productcatalogservice_cpu_3,RE1-OB,cpu,"Insufficient pre/post samples: pre=63, post=0"

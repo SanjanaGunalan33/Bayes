@@ -1,0 +1,316 @@
+{
+  "dataset": {
+    "benchmark": "RCAEval",
+    "included_datasets": [
+      "RE1-OB",
+      "RE1-SS",
+      "RE1-TT",
+      "RE2-OB",
+      "RE2-SS",
+      "RE2-TT"
+    ],
+    "metadata_cases": 645,
+    "usable_cases": 643,
+    "excluded_cases": 2,
+    "fault_classes": [
+      "cpu",
+      "mem",
+      "disk",
+      "delay",
+      "loss",
+      "socket"
+    ]
+  },
+  "methodology": {
+    "feature_extraction": "pre/post strongest service-level bounded relative change",
+    "fault_label_used_during_feature_extraction": false,
+    "threshold_learning": "training split only",
+    "bayesian_parameter_learning": "training split only",
+    "missing_metric_handling": "missing evidence is omitted from likelihood product"
+  },
+  "training": {
+    "split": "training",
+    "cases": 514,
+    "top1_accuracy": 0.7101167315175098,
+    "top3_accuracy": 0.9727626459143969,
+    "mrr": 0.8361219195849545,
+    "confusion_matrix": {
+      "cpu": {
+        "cpu": 59,
+        "mem": 12,
+        "disk": 19,
+        "delay": 0,
+        "loss": 5,
+        "socket": 0
+      },
+      "mem": {
+        "cpu": 1,
+        "mem": 87,
+        "disk": 4,
+        "delay": 0,
+        "loss": 3,
+        "socket": 1
+      },
+      "disk": {
+        "cpu": 24,
+        "mem": 9,
+        "disk": 56,
+        "delay": 0,
+        "loss": 4,
+        "socket": 3
+      },
+      "delay": {
+        "cpu": 1,
+        "mem": 0,
+        "disk": 2,
+        "delay": 83,
+        "loss": 10,
+        "socket": 0
+      },
+      "loss": {
+        "cpu": 6,
+        "mem": 2,
+        "disk": 4,
+        "delay": 23,
+        "loss": 60,
+        "socket": 0
+      },
+      "socket": {
+        "cpu": 2,
+        "mem": 8,
+        "disk": 1,
+        "delay": 1,
+        "loss": 4,
+        "socket": 20
+      }
+    },
+    "per_class": {
+      "cpu": {
+        "precision": 0.6344086021505376,
+        "recall": 0.6210526315789474,
+        "f1": 0.6276595744680852,
+        "support": 95
+      },
+      "mem": {
+        "precision": 0.7372881355932204,
+        "recall": 0.90625,
+        "f1": 0.8130841121495327,
+        "support": 96
+      },
+      "disk": {
+        "precision": 0.6511627906976745,
+        "recall": 0.5833333333333334,
+        "f1": 0.6153846153846155,
+        "support": 96
+      },
+      "delay": {
+        "precision": 0.7757009345794392,
+        "recall": 0.8645833333333334,
+        "f1": 0.8177339901477833,
+        "support": 96
+      },
+      "loss": {
+        "precision": 0.6976744186046512,
+        "recall": 0.631578947368421,
+        "f1": 0.6629834254143646,
+        "support": 95
+      },
+      "socket": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5555555555555556,
+        "f1": 0.6666666666666667,
+        "support": 36
+      }
+    }
+  },
+  "validation": {
+    "split": "validation",
+    "cases": 62,
+    "top1_accuracy": 0.5967741935483871,
+    "top3_accuracy": 0.9516129032258065,
+    "mrr": 0.7725806451612903,
+    "confusion_matrix": {
+      "cpu": {
+        "cpu": 4,
+        "mem": 1,
+        "disk": 2,
+        "delay": 0,
+        "loss": 4,
+        "socket": 0
+      },
+      "mem": {
+        "cpu": 0,
+        "mem": 10,
+        "disk": 0,
+        "delay": 0,
+        "loss": 1,
+        "socket": 1
+      },
+      "disk": {
+        "cpu": 5,
+        "mem": 0,
+        "disk": 6,
+        "delay": 0,
+        "loss": 1,
+        "socket": 0
+      },
+      "delay": {
+        "cpu": 0,
+        "mem": 0,
+        "disk": 1,
+        "delay": 10,
+        "loss": 1,
+        "socket": 0
+      },
+      "loss": {
+        "cpu": 0,
+        "mem": 0,
+        "disk": 1,
+        "delay": 3,
+        "loss": 7,
+        "socket": 0
+      },
+      "socket": {
+        "cpu": 0,
+        "mem": 3,
+        "disk": 0,
+        "delay": 0,
+        "loss": 1,
+        "socket": 0
+      }
+    },
+    "per_class": {
+      "cpu": {
+        "precision": 0.4444444444444444,
+        "recall": 0.36363636363636365,
+        "f1": 0.39999999999999997,
+        "support": 11
+      },
+      "mem": {
+        "precision": 0.7142857142857143,
+        "recall": 0.8333333333333334,
+        "f1": 0.7692307692307692,
+        "support": 12
+      },
+      "disk": {
+        "precision": 0.6,
+        "recall": 0.5,
+        "f1": 0.5454545454545454,
+        "support": 12
+      },
+      "delay": {
+        "precision": 0.7692307692307693,
+        "recall": 0.8333333333333334,
+        "f1": 0.8,
+        "support": 12
+      },
+      "loss": {
+        "precision": 0.4666666666666667,
+        "recall": 0.6363636363636364,
+        "f1": 0.5384615384615385,
+        "support": 11
+      },
+      "socket": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      }
+    }
+  },
+  "test": {
+    "split": "test",
+    "cases": 67,
+    "top1_accuracy": 0.7014925373134329,
+    "top3_accuracy": 1.0,
+    "mrr": 0.8407960199004975,
+    "confusion_matrix": {
+      "cpu": {
+        "cpu": 7,
+        "mem": 3,
+        "disk": 3,
+        "delay": 0,
+        "loss": 0,
+        "socket": 0
+      },
+      "mem": {
+        "cpu": 1,
+        "mem": 10,
+        "disk": 1,
+        "delay": 0,
+        "loss": 0,
+        "socket": 0
+      },
+      "disk": {
+        "cpu": 3,
+        "mem": 1,
+        "disk": 7,
+        "delay": 0,
+        "loss": 1,
+        "socket": 0
+      },
+      "delay": {
+        "cpu": 0,
+        "mem": 0,
+        "disk": 0,
+        "delay": 11,
+        "loss": 1,
+        "socket": 0
+      },
+      "loss": {
+        "cpu": 0,
+        "mem": 0,
+        "disk": 1,
+        "delay": 4,
+        "loss": 8,
+        "socket": 0
+      },
+      "socket": {
+        "cpu": 0,
+        "mem": 1,
+        "disk": 0,
+        "delay": 0,
+        "loss": 0,
+        "socket": 4
+      }
+    },
+    "per_class": {
+      "cpu": {
+        "precision": 0.6363636363636364,
+        "recall": 0.5384615384615384,
+        "f1": 0.5833333333333334,
+        "support": 13
+      },
+      "mem": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8333333333333334,
+        "f1": 0.7407407407407408,
+        "support": 12
+      },
+      "disk": {
+        "precision": 0.5833333333333334,
+        "recall": 0.5833333333333334,
+        "f1": 0.5833333333333334,
+        "support": 12
+      },
+      "delay": {
+        "precision": 0.7333333333333333,
+        "recall": 0.9166666666666666,
+        "f1": 0.8148148148148148,
+        "support": 12
+      },
+      "loss": {
+        "precision": 0.8,
+        "recall": 0.6153846153846154,
+        "f1": 0.6956521739130435,
+        "support": 13
+      },
+      "socket": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "support": 5
+      }
+    }
+  }
+}
